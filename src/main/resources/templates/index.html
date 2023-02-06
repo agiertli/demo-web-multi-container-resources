@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="base :: head"/>
+<body>
+<div th:replace="base :: header"/>
+<div id="main">
+    <div id="heading">
+        <h1>List of Movies Watched</h1>
+        <div id="addNewButton">
+            <a href="/add">Add New Movie</a>
+        </div>
+    </div>
+    <div id="list">
+        <div th:each="mp:${mps}" id="mpDiv">
+            <a th:href="@{'/get/{id}' (id=${mp.id})}">
+                <div id="innerMP">
+                    <h4 th:text="${mp.name}"/>
+                    <h5 th:text="${mp.year}"/>
+                    <img th:src="${mp.imageUrl}" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

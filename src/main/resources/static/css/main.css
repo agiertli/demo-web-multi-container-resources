@@ -1,0 +1,128 @@
+html{
+    background-color: dimgray;
+    color: whitesmoke;
+}
+
+#mpDiv {
+    display: inline-block;
+    height: 440px;
+    width: 250px;
+    max-width: 250px;
+    padding: 2%;
+    color: whitesmoke;
+}
+#innerMP > img {
+    max-width: 240px;
+    max-height: 350px;
+    height: max-content;
+    width: max-content;
+    object-fit: contain;
+}
+
+#innerMP {
+    height: 100%;
+    width: 100%;
+    background: peachpuff;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+#main {
+    text-align: center;
+}
+
+#addNewButton {
+    float: right;
+    margin-right: 5px;
+    padding 5px;
+}
+
+.form{
+    display: block;
+    width: 75%;
+    padding: 2%;
+    text-align: center;
+    margin: auto;
+}
+
+.form-group{
+    padding: 5px;
+    width:500px;
+    text-align: center;
+    display: block;
+    margin:auto;
+}
+
+.form-group > label {
+    width: 150px;
+    max-width: 150px;
+    float: left;
+    margin-left: 5px;
+}
+.form-group > input {
+    width: 250px;
+    max-width: 250px;
+    float: left;
+    margin-left: 5px;
+}
+
+.form-group > select {
+    width: 250px;
+    max-width: 250px;
+    float: left;
+    margin-left: 5px;
+}
+
+.check {
+}
+
+.movieCheck{
+     width: 250px;
+     max-width: 250px;
+}
+.tvCheck{
+     width: 250px;
+     max-width: 250px;
+}
+
+.movieCheck > label{
+    width: 150px;
+    max-width: 150px;
+    float: left;
+    margin-left: 5px;
+}
+
+.tvCheck > label{
+    width: 150px;
+    max-width: 150px;
+    float: left;
+    margin-left: 5px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#mainTitle{
+    width: 33%;
+    text-align: center;
+}
+
+#imgDiv{
+    width: 33%;
+}
+
+#logoImg{
+    width: 50px;
+}
+
+#details > img {
+    width: 400px;
+}

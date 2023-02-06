@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="base :: head"/>
+<body>
+<div th:replace="base :: header"/>
+
+<div id="main">
+    <div id="details">
+        <img th:src="${mp.imageUrl}" />
+        <h2 th:text="${mp.name}"/>
+        <h3 th:text="${mp.year}"/>
+        <h3 th:text="${mp.genre}"/>
+        <h3 th:text="@{'{rank} out of 10' (rank=${mp.rank})}"/>
+    </div>
+    <div>
+        <a th:href="@{'/delete/{id}' (id=${mp.id})}"> <button>Delete</button> </a>
+    </div>
+</div>
+</body>
+</html>
