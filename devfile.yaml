@@ -1,0 +1,28 @@
+schemaVersion: 2.1.0
+metadata:
+  name: web-frontend
+components:
+  - name: tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8@sha256:ac5aaba0bbf1caa7f23205ab837e3029ff9f605211ebf38bdf4b9f1b8fb1ba83
+      memoryLimit: 3Gi
+      endpoints:
+        - exposure: public
+          name: web
+          protocol: tcp
+          targetPort: 8081
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+  - name: m2
+    volume:
+      size: 1G
+  - name: backend-h2
+    container:
+      memoryLimit: 3Gi
+      image: quay.io/marslan/springboot-backend
+      endpoints:
+        - exposure: none
+          name: backend
+          protocol: http
+          targetPort: 8080
