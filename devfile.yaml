@@ -2,7 +2,7 @@ schemaVersion: 2.1.0
 metadata:
   name: web-frontend-single-container
 components:
-  - name: tools
+  - name: tools-limit-test
     container:
       image: registry.redhat.io/devspaces/udi-rhel8@sha256:ac5aaba0bbf1caa7f23205ab837e3029ff9f605211ebf38bdf4b9f1b8fb1ba83
       memoryLimit: 1Gi
