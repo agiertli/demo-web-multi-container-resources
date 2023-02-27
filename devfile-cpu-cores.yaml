@@ -1,0 +1,33 @@
+schemaVersion: 2.1.0
+metadata:
+  name: web-frontend-multi-container-cpu-core
+components:
+  - name: tools-limit-test
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8@sha256:ac5aaba0bbf1caa7f23205ab837e3029ff9f605211ebf38bdf4b9f1b8fb1ba83
+      memoryLimit: 1Gi
+      memoryRequest: 512Mi
+      cpuRequest: 200m
+      endpoints:
+        - exposure: public
+          name: web
+          protocol: tcp
+          targetPort: 8081
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+  - name: m2
+    volume:
+      size: 1G
+  - name: second-container
+    container:
+      memoryRequest: 513Mi
+      memoryLimit: 1Gi
+      cpuRequest: '2'
+      cpuLimit: '4'
+      image: quay.io/marslan/springboot-backend
+      endpoints:
+        - exposure: none
+          name: backend
+          protocol: http
+          targetPort: 8080    
