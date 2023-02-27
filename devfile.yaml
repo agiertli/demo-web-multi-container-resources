@@ -39,6 +39,6 @@ components:
       image: quay.io/marslan/springboot-backend
       endpoints:
         - exposure: none
-          name: backend
+          name: backend2
           protocol: http
-          targetPort: 8080            
+          targetPort: 8082            
