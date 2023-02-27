@@ -1,6 +1,6 @@
 schemaVersion: 2.1.0
 metadata:
-  name: web-frontend-single-container
+  name: web-frontend-multi-container
 components:
   - name: tools-limit-test
     container:
