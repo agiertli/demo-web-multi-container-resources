@@ -19,14 +19,3 @@ components:
   - name: m2
     volume:
       size: 1G
-  - name: backend-h2
-    container:
-      memoryRequest: 512Mi
-      memoryLimit: 1Gi
-      cpuRequest: 100m
-      image: quay.io/marslan/springboot-backend
-      endpoints:
-        - exposure: none
-          name: backend
-          protocol: http
-          targetPort: 8080
