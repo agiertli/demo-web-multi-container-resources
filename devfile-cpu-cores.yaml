@@ -1,6 +1,6 @@
 schemaVersion: 2.1.0
 metadata:
-  name: web-frontend-multi-container-cpu-core
+  name: web-frontend-multi-container-cpu-core-2
 components:
   - name: tools-limit-test
     container:
