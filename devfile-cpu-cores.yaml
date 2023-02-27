@@ -23,8 +23,8 @@ components:
     container:
       memoryRequest: 513Mi
       memoryLimit: 1Gi
-      cpuRequest: '2'
-      cpuLimit: '4'
+      cpuRequest: '1'
+      cpuLimit: '2'
       image: quay.io/marslan/springboot-backend
       endpoints:
         - exposure: none
