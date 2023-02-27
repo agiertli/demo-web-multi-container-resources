@@ -5,7 +5,8 @@ components:
   - name: tools
     container:
       image: registry.redhat.io/devspaces/udi-rhel8@sha256:ac5aaba0bbf1caa7f23205ab837e3029ff9f605211ebf38bdf4b9f1b8fb1ba83
-      memoryRequest: 256Mi
+      memoryLimit: 1Gi
+      memoryRequest: 512Mi
       cpuRequest: 200m
       endpoints:
         - exposure: public
@@ -20,7 +21,8 @@ components:
       size: 1G
   - name: backend-h2
     container:
-      memoryRequest: 128Mi
+      memoryRequest: 512Mi
+      memoryLimit: 1Gi
       cpuRequest: 100m
       image: quay.io/marslan/springboot-backend
       endpoints:
